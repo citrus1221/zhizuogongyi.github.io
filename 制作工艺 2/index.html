@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <style>
+            body {
+                  overflow-x: scroll;
+                  color: rgb(78, 66, 62);
+                  height: 100vh;
+            }
+
+            article {
+                  display: inline-block;
+                  position: absolute;
+                  top: 80px;
+                  left: 200px;
+                  right: 0;
+                  bottom: 0;
+            }
+
+
+            .sidebar {
+
+                  top: 0;
+                  left: 0;
+                  width: 50px;
+                  height: 100%;
+            }
+
+            .sidebar img {
+                  width: 100%;
+                  height: 100vh;
+                  object-fit: cover;
+            }
+
+            .section {
+                  width: 100%;
+                  display: flex;
+            }
+
+            @font-face {
+                  font-family: 'biaotifont';
+                  src: url('./方正悬针篆变简体.ttf') format('truetype');
+            }
+
+            @font-face {
+                  font-family: 'kaifont';
+                  src: url('./楷体_GB2312.ttf') format('truetype');
+            }
+
+            h1 {
+                  font-family: 'biaotifont', Arial, sans-serif;
+                  font-size: 30pt;
+            }
+
+            h2 {
+                  font-family: 'kaifont', Arial, sans-serif;
+                  font-size: 30pt;
+
+            }
+
+            .topbar {
+                  position: absolute;
+                  top: 0;
+                  left: 200px;
+                  width: calc(100% - 200px);
+                  height: 80px;
+                  text-align: left;
+            }
+
+            .topbar h1 {
+                  margin: 10px;
+                  margin-block: auto;
+                  margin-top: 10px;
+            }
+
+            .topbar h2 {
+                  margin-left: 10px;
+                  font-size: 20px;
+                  margin-top: 0px;
+            }
+
+            .left-column {
+                  width: 150px;
+                  padding: 10px;
+                  bottom: 0;
+                  padding-top: 433px;
+            }
+
+            .left-column h2 {
+                  font-size: 10pt;
+            }
+
+            .left-column h1 {
+                  letter-spacing: 3px;
+                  font-size: 10pt;
+            }
+
+            .sidebar img {
+                  width: fit-content;
+            }
+
+            .image-container {
+                  flex: 1;
+                  padding: 20px;
+            }
+
+            .vertical-nav {
+                  width: 200px;
+                  padding: 10px;
+                  font-family: 'biaotifont', Arial, sans-serif;
+
+            }
+
+
+            .vertical-nav ul {
+                  list-style-type: none;
+                  padding: 0;
+            }
+
+            .vertical-nav li {
+                  display: block;
+                  padding: 10px;
+                  text-decoration: none;
+                  color: rgb(78, 66, 62, 0.6);
+                  font-weight: bold;
+            }
+
+            .vertical-nav li:hover {
+                  transform: scale(1.1);
+                  transition: transform 0.2s ease-in-out;
+                  color: rgb(78, 66, 62);
+            }
+
+            .vertical-nav h1 {
+                  font-size: 10pt;
+                  margin-bottom: 0px;
+                  margin-top: 5px;
+            }
+
+            .vertical-nav h2 {
+                  font-size: 12pt;
+                  margin-top: 0px;
+            }
+
+            .image-container {
+                  display: flex;
+                  justify-content: center;
+            }
+
+            .modal-content {
+                  display: block;
+                  margin: 0 auto;
+                  max-width: 90%;
+                  max-height: 90%;
+                  background-color: rgb(255, 253, 240);
+                  border-radius: 30px;
+                  padding: 20px;
+
+            }
+
+            .modal-content {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background-image: url('path/to/background-image.jpg');
+                  background-size: cover;
+                  background-position: center;
+            }
+
+            .modal {
+                  display: none;
+                  position: fixed;
+                  z-index: 1;
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  overflow: auto;
+
+            }
+
+            .modal-content {
+                  display: block;
+                  margin: 0 auto;
+                  max-width: 90%;
+                  max-height: 90%;
+                  left: 50%;
+                  box-shadow: -1px 0px 20px 6px #9e9e9ec9;
+            }
+
+
+            .section {
+                  position: relative;
+            }
+      </style>
+      <script>
+            function showModal(imageSrc, caption) {
+                  var modal = document.getElementById('myModal');
+                  var modalImg = document.getElementById('img01');
+
+                  modal.style.display = 'block';
+                  modalImg.src = imageSrc;
+            }
+
+            function closeModal() {
+                  var modal = document.getElementById('myModal');
+                  modal.style.display = 'none';
+            }
+            window.onclick = function (event) {
+                  var modal = document.getElementById('myModal');
+                  if (event.target == modal) {
+                        closeModal();
+                  }
+            };
+
+      </script>
+</head>
+
+<body>
+      <div class="sidebar">
+            <img src="./制作工艺-02.png" alt="Sidebar Image">
+      </div>
+      <div class="topbar">
+            <h1>中华香制作工艺</h1>
+            <h2>The Craft of Chinese Incense</h2>
+      </div>
+      <article>
+            <div class="section">
+                  <div class="left-column" ;>
+                        <h1>传统制香技艺是制香者选择花、草、果、木等天然材料,通过手工研磨、搅拌、压制等工艺制成天然香。在中国，香文化源远流长，香制作技艺也是一门非常古老的手艺。传统香制作技艺主要分为三个步骤：选料、研磨和制香。
+                        </h1>
+                        <h2>Traditional incense making techniques are divided into three main steps: selecting the
+                              ingredients, grinding and making
+                              the incense.</h2>
+                  </div>
+                  <div class="vertical-nav">
+                        <ul>
+                              <li onclick="showModal('./资源 1.png')">
+                                    <img src="./bian.png">
+                                    <h1>制香的基础步骤</h1>
+                                    <h2>The basic steps of incense making</h2>
+                              </li>
+                              <li onclick="showModal('./资源 13.png')">
+                                    <img src="./bian.png">
+                                    <h1 href="./balm.html">香膏制作工艺</h1>
+                                    <h2>Balm making process</h2>
+                              </li>
+                              <li onclick="showModal('./资源 7.png')">
+                                    <img src="./bian.png">
+                                    <h1 href="#">盘香制作工艺</h1>
+                                    <h2>Coil incense making</h2>
+                              </li>
+                              <li onclick="showModal('./资源 8.png')">
+                                    <img src="./bian.png">
+                                    <h1 href="#">塔香制作工艺</h1>
+                                    <h2>Tower incense making process</h2>
+                              </li>
+                              <li onclick="showModal('./资源 9.png')">
+                                    <img src="./bian.png">
+                                    <h1 href="#">香饼制作工艺</h1>
+                                    <h2>Spice cake making</h2>
+                              </li>
+                              <li onclick="showModal('./资源 10.png')">
+                                    <img src="./bian.png">
+                                    <h1 href="#">线香制作工艺</h1>
+                                    <h2>Threaded incense making process</h2>
+                              </li>
+                              <li onclick="showModal('./资源 12.png')">
+                                    <img src="./bian.png">
+                                    <h1 href="#">篆香制作工艺</h1>
+                                    <h2>Seal incense making process</h2>
+                              </li>
+
+                        </ul>
+                  </div>
+                  <div id="myModal" class="modal">
+                        <img class="modal-content" id="img01">
+
+                  </div>
+
+
+
+
+            </div>
+
+
+
+      </article>
+
+</body>
